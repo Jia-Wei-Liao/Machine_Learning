@@ -1,5 +1,14 @@
 # CIFAR100_Classification
 
+## Requirements
+- `numpy == `
+- `torch == `
+- `torchvision ==`
+- `PIL`
+- `tqdm`
+- `scipy`
+- `timm`
+
 
 ## Training
 To train the model, you can run this command:
