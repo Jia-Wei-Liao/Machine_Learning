@@ -1,10 +1,5 @@
-# Orchid_Classification
+# CIFAR100_Classification
 
-## Getting the code
-You can download all the files in this repository by cloning this repository:  
-```
-git clone https://github.com/Jia-Wei-Liao/Orchid_Classification.git
-```
 
 ## Training
 To train the model, you can run this command:
@@ -34,19 +29,19 @@ python train.py -bs <batch size> \
 
 ### For EfficientNet_b4 with MCCE loss
 ```
-python --model EfficientB4 --img_size 416 --loss MCCE
+python --model EfficientB4
 ```
 
 ### For Swin Transformer
 ```
-python --model Swin --img_size 384 --lr 3e-4
+python --model Swin
 ```
 
 
 ## Testing
 To test the results, you can run this command:
 ```
-python test.py --checkpoint <XX-XX-XX-XX-XX> --weight <ep=XXXX-acc=0.XXXX.pth>
+python test.py
 ```
 
 
@@ -150,9 +145,9 @@ We thank the authors of these repositories:
 ## Citation
 ```
 @misc{
-    title  = {orchid_classification},
-    author = {Jia-Wei Liao, Yu-Hsi Chen, Jing-Lun Huang, Kuok-Tong Ng},
-    url    = {https://github.com/Jia-Wei-Liao/Orchid_Classification},
+    title  = {cifa100_classification},
+    author = {Jia-Wei Liao},
+    url    = {https://github.com/Jia-Wei-Liao/Machine_Learning/tree/main/HW2},
     year   = {2022}
 }
 ```
