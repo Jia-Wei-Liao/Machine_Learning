@@ -63,7 +63,7 @@ python test.py
     <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
     <td>Step (size=3, gamma=0.8)</td>
     <td>RandomHorizontalFlip,<br>RandomRotation,<br>Autoaugmentation,<br>RandomNoise,<br>Normalize</td>
-    <td>88.57 </td>
+    <td>88.57% </td>
   </tr>
   <tr>
     <td>EfficientNet-b4</td>
@@ -73,7 +73,7 @@ python test.py
     <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
     <td>Step (size=3, gamma=0.8)</td>
     <td>RandomHorizontalFlip,<br>RandomRotation,<br>Autoaugmentation,<br>RandomNoise,<br>Normalize</td>
-    <td>89.34 </td>
+    <td>89.34% </td>
   </tr>
   <tr>
     <td>EfficientNet-b4</td>
@@ -83,7 +83,7 @@ python test.py
     <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
     <td>Step (size=3, gamma=0.8)</td>
     <td>RandomHorizontalFlip,<br>RandomRotation,<br>Autoaugmentation,<br>RandomNoise,<br>Normalize</td>
-    <td>88.73 </td>
+    <td>88.73% </td>
   </tr>
   <tr>
     <td>EfficientNet-b4</td>
@@ -93,7 +93,7 @@ python test.py
     <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
     <td>Step (size=3, gamma=0.8)</td>
     <td>RandomHorizontalFlip,<br>RandomRotation,<br>Autoaugmentation,<br>RandomNoise,<br>Normalize</td>
-    <td>89.35 </td>
+    <td>89.35% </td>
   </tr>
   <tr>
     <td>EfficientNet-b4</td>
@@ -103,7 +103,7 @@ python test.py
     <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
     <td>Step (size=3, gamma=0.8)</td>
     <td>RandomHorizontalFlip,<br>RandomRotation,<br>Autoaugmentation,<br>RandomNoise,<br>Normalize</td>
-    <td>88.90 </td>
+    <td>88.90% </td>
   </tr>
 </table>
 
