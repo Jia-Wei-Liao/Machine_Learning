@@ -25,13 +25,9 @@ def train(args):
     device = torch.device(f'cuda:{args.device[0]}'
                           if torch.cuda.is_available() else 'cpu')
 
-    mean = (0.485, 0.456, 0.406)
-    std = (0.229, 0.224, 0.225)
-
     train_loader, val_loader = get_train_val_loader(args)
 
     model = get_model(args)
-    model = get_pretrain(model, args)
     model = nn.DataParallel(model, device_ids=args.device)
     model.to(device)
 
@@ -83,10 +79,6 @@ if __name__ == '__main__':
                         help='number of classes')
     parser.add_argument('--model', type=str, default='EfficientB4',
                         help='model')
-    parser.add_argument('--pretrain', type=bool, default=0,
-                        help='pretrained weight')
-    parser.add_argument('--img_size', type=int, default=384,
-                        help='crop and resize to img_size')
 
     # set optimization
     parser.add_argument('--loss', type=str, default='CE',

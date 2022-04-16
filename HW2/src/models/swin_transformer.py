@@ -9,7 +9,6 @@ import torch
 import torch.nn as nn
 import torch.utils.checkpoint as checkpoint
 from timm.models.layers import DropPath, to_2tuple, trunc_normal_
-from .base import BaseModule
 
 
 class Mlp(nn.Module):
@@ -457,7 +456,7 @@ class PatchEmbed(nn.Module):
         return flops
 
 
-class SwinTransformer(BaseModule):
+class SwinTransformer(nn.Module):
     r""" Swin Transformer
         A PyTorch impl of : `Swin Transformer: Hierarchical Vision Transformer using Shifted Windows`  -
           https://arxiv.org/pdf/2103.14030
@@ -587,3 +586,8 @@ class SwinTransformer(BaseModule):
         flops += self.num_features * self.patches_resolution[0] * self.patches_resolution[1] // (2 ** self.num_layers)
         flops += self.num_features * self.num_classes
         return flops
+
+    def save(self, path):
+        torch.save(self, path)
+
+        return

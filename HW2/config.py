@@ -15,14 +15,8 @@ def get_model(args):
     }
     model = Model[args.model](args.num_classes)
 
-    return model
-
-
-def get_pretrain(model, args):
-    if args.pretrain:
-        Weight = {
-            'Swin': load_pretrained(model)
-        }
+    if args.model == 'Swin':
+        load_pretrained(model)
 
     return model
 
