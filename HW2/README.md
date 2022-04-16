@@ -7,8 +7,6 @@ To train the model, you can run this command:
 python train.py -bs <batch size> \
                 -ep <epoch> \
                 --model <model> \
-                --pretrain <using pretrained-weight> \
-                --img_size <crop and resize to img_size> \
                 --loss <loss function> \
                 --optim <optimizer> \
                 --lr <learning rate> \
@@ -48,7 +46,6 @@ python test.py
 ## Experiment results
 <table>
   <tr>
-    <td>Checkpoint</td>
     <td>Model</td>
     <td>Batch size</td>
     <td>Epochs</td>
@@ -56,80 +53,17 @@ python test.py
     <td>Optimizer</td>
     <td>Scheduler</td>
     <td>Augmentation</td>
-    <td>Best val acc</td>
     <td>test acc</td>
   </tr>
   <tr>
-    <td>04-11-18-49-39</td>
     <td>EfficientNet-b4</td>
     <td>32</td>
     <td>200</td>
     <td>CE</td>
     <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
     <td>Step (size=3, gamma=0.8)</td>
-    <td>RandomResizedCrop(416),<br>RandomHorizontalFlip(p=0.5),<br>RandomRotation(degree=10),<br>Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))</td>
-    <td>85.62 (ep=75) </td>
+    <td>RandomHorizontalFlip,<br>RandomRotation,<br>Normalize</td>
     <td>84.27 </td>
-  </tr>
-  <tr>
-    <td>04-11-20-01-09</td>
-    <td>EfficientNet-b4</td>
-    <td>32</td>
-    <td>200</td>
-    <td>FLSD</td>
-    <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
-    <td>Step (size=3, gamma=0.8)</td>
-    <td>RandomResizedCrop(416),<br>RandomHorizontalFlip(p=0.5),<br>RandomRotation(degree=10),<br>Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))</td>
-    <td>86.07 (ep=160)</td>
-    <td>85.85</td>
-  </tr>
-    <tr>
-    <td>04-11-21-51-39</td>
-    <td>EfficientNet-b4</td>
-    <td>32</td>
-    <td>200</td>
-    <td>MCCE</td>
-    <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
-    <td>Step (size=3, gamma=0.8)</td>
-    <td>RandomResizedCrop(416),<br>RandomHorizontalFlip(p=0.5),<br>RandomRotation(degree=10),<br>Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))</td>
-    <td>84.93 (ep=107)</td>
-    <td>83.79 </td>
-  </tr>
-  <tr>
-    <td>04-11-23-42-37</td>
-    <td>EfficientNet-b4</td>
-    <td>16</td>
-    <td>200</td>
-    <td>CE</td>
-    <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
-    <td>Step (size=3, gamma=0.8)</td>
-    <td>RandomResizedCrop(416),<br>RandomHorizontalFlip(p=0.5),<br>RandomRotation(degree=10),<br>Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))</td>
-    <td>86.30 (ep=36)</td>
-    <td> </td>
-  </tr>
-  <tr>
-    <td>04-11-23-58-50</td>
-    <td>EfficientNet-b4</td>
-    <td>16</td>
-    <td>200</td>
-    <td>MCCE</td>
-    <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
-    <td>Step (size=3, gamma=0.8)</td>
-    <td>RandomResizedCrop(416),<br>RandomHorizontalFlip(p=0.5),<br>RandomRotation(degree=10),<br>Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))<br>RandomNoise(p=0.1)</td>
-    <td>85.84 (ep=92)</td>
-    <td> </td>
-  </tr>
-  <tr>
-    <td>04-12-02-09-10</td>
-    <td>EfficientNet-b4</td>
-    <td>16</td>
-    <td>200</td>
-    <td>FL</td>
-    <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
-    <td>Step (size=3, gamma=0.8)</td>
-    <td>RandomResizedCrop(416),<br>RandomHorizontalFlip(p=0.5),<br>RandomRotation(degree=10),<br>Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))<br>RandomNoise(p=0.1)</td>
-    <td>86.99 (ep=92)</td>
-    <td> </td>
   </tr>
 </table>
 
