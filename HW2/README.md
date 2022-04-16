@@ -34,23 +34,12 @@ python train.py -bs <batch size> \
 - optim: SGD, Adam, AdamW, Ranger
 - scheduler: step (gamma, step_size), cos
 
-### For EfficientNet_b4 with MCCE loss
-```
-python --model EfficientB4
-```
-
-### For Swin Transformer
-```
-python --model Swin
-```
-
 
 ## Testing
 To test the results, you can run this command:
 ```
 python test.py
 ```
-
 
 ## Experiment results
 <table>
