@@ -103,6 +103,16 @@ python test.py
     <td>RandomHorizontalFlip,<br>RandomRotation,<br>Autoaugmentation,<br>RandomNoise,<br>Normalize</td>
     <td>88.90% </td>
   </tr>
+  <tr>
+    <td>EfficientNet-b4</td>
+    <td>32</td>
+    <td>200</td>
+    <td>FLSD53</td>
+    <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
+    <td>Step (size=3, gamma=0.8)</td>
+    <td>RandomHorizontalFlip,<br>RandomRotation,<br>Autoaugmentation,<br>RandomNoise,<br>Normalize</td>
+    <td>89.52% </td>
+  </tr>
 </table>
 
 
