@@ -54,7 +54,7 @@ python test.py
     <td>test acc</td>
   </tr>
   <tr>
-    <td>EfficientNet-b4</td>
+    <td>EfficientNet-B4</td>
     <td>32</td>
     <td>200</td>
     <td>CE</td>
@@ -64,7 +64,7 @@ python test.py
     <td>88.57% </td>
   </tr>
   <tr>
-    <td>EfficientNet-b4</td>
+    <td>EfficientNet-B4</td>
     <td>64</td>
     <td>200</td>
     <td>CE</td>
@@ -74,7 +74,17 @@ python test.py
     <td>89.34% </td>
   </tr>
   <tr>
-    <td>EfficientNet-b4</td>
+    <td>EfficientNet-B4</td>
+    <td>32</td>
+    <td>200</td>
+    <td>MCCE</td>
+    <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
+    <td>Step (size=3, gamma=0.8)</td>
+    <td>RandomHorizontalFlip,<br>RandomRotation,<br>Autoaugmentation,<br>RandomNoise,<br>Normalize</td>
+    <td>88.37% </td>
+  </tr>
+  <tr>
+    <td>EfficientNet-B4</td>
     <td>64</td>
     <td>200</td>
     <td>MCCE</td>
@@ -84,8 +94,8 @@ python test.py
     <td>88.73% </td>
   </tr>
   <tr>
-    <td>EfficientNet-b4</td>
-    <td>64</td>
+    <td>EfficientNet-B4</td>
+    <td>32</td>
     <td>200</td>
     <td>FL</td>
     <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
@@ -94,7 +104,7 @@ python test.py
     <td>88.24% </td>
   </tr>
   <tr>
-    <td>EfficientNet-b4</td>
+    <td>EfficientNet-B4</td>
     <td>64</td>
     <td>200</td>
     <td>FL</td>
@@ -104,7 +114,7 @@ python test.py
     <td>89.35% </td>
   </tr>
   <tr>
-    <td>EfficientNet-b4</td>
+    <td>EfficientNet-B4</td>
     <td>32</td>
     <td>200</td>
     <td>FLSD53</td>
@@ -114,8 +124,8 @@ python test.py
     <td>88.90% </td>
   </tr>
   <tr>
-    <td>EfficientNet-b4</td>
-    <td>32</td>
+    <td>EfficientNet-B4</td>
+    <td>64</td>
     <td>200</td>
     <td>FLSD53</td>
     <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
@@ -132,6 +142,16 @@ python test.py
     <td>Step (size=3, gamma=0.8)</td>
     <td>RandomHorizontalFlip,<br>RandomRotation,<br>Autoaugmentation,<br>RandomNoise,<br>Normalize</td>
     <td>93.56% </td>
+  </tr>
+  <tr>
+    <td>Swin-B</td>
+    <td>64</td>
+    <td>200</td>
+    <td>FLSD53</td>
+    <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
+    <td>Step (size=3, gamma=0.8)</td>
+    <td>RandomHorizontalFlip,<br>RandomRotation,<br>Autoaugmentation,<br>RandomNoise,<br>Normalize</td>
+    <td>93.60% </td>
   </tr>
 </table>
 
