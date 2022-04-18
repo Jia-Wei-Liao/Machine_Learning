@@ -1,13 +1,13 @@
 # CIFAR100_Classification
 
 ## Requirements
-- `numpy == `
-- `torch == `
-- `torchvision ==`
-- `PIL`
-- `tqdm`
-- `scipy`
-- `timm`
+- `numpy == 1.21.5`
+- `torch == 1.10.2`
+- `torchvision == 0.11.3`
+- `PIL == 9.0.1`
+- `tqdm == 4.63.0`
+- `scipy == 1.7.3`
+- `timm == 0.4.12`
 
 
 ## Training
