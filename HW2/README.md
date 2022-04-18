@@ -130,7 +130,7 @@ Before training, we use random Horizontal flip, random rotation, auto-augmentati
     <td>64</td>
     <td>200</td>
     <td>FL</td>
-    <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
+    <td>AdamW (lr=3e-5,  weight decay=1e-4)</td>
     <td>Step (size=3, gamma=0.8)</td>
     <td>93.56% </td>
   </tr>
@@ -139,7 +139,7 @@ Before training, we use random Horizontal flip, random rotation, auto-augmentati
     <td>64</td>
     <td>200</td>
     <td>FLSD53</td>
-    <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
+    <td>AdamW (lr=3e-5,  weight decay=1e-4)</td>
     <td>Step (size=3, gamma=0.8)</td>
     <td>93.60% </td>
   </tr>
