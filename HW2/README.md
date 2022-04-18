@@ -77,7 +77,7 @@ python test.py
     <td>EfficientNet-B4</td>
     <td>32</td>
     <td>200</td>
-    <td>MCCE</td>
+    <td>MC</td>
     <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
     <td>Step (size=3, gamma=0.8)</td>
     <td>RandomHorizontalFlip,<br>RandomRotation,<br>Autoaugmentation,<br>RandomNoise,<br>Normalize</td>
@@ -87,7 +87,7 @@ python test.py
     <td>EfficientNet-B4</td>
     <td>64</td>
     <td>200</td>
-    <td>MCCE</td>
+    <td>MC</td>
     <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
     <td>Step (size=3, gamma=0.8)</td>
     <td>RandomHorizontalFlip,<br>RandomRotation,<br>Autoaugmentation,<br>RandomNoise,<br>Normalize</td>
@@ -158,10 +158,11 @@ python test.py
 
 ## GitHub Acknowledgement
 We thank the authors of these repositories:
-- MCCE: https://github.com/Kurumi233/Mutual-Channel-Loss  
-- FLSD: https://github.com/torrvision/focal_calibration  
-- Ranger21: https://github.com/lessw2020/Ranger21  
 - AutoAugment: https://github.com/DeepVoltaire/AutoAugment  
+- Swin Transformer: https://github.com/microsoft/Swin-Transformer  
+- MC-Loss: https://github.com/Kurumi233/Mutual-Channel-Loss  
+- FLSD53: https://github.com/torrvision/focal_calibration  
+- Ranger21: https://github.com/lessw2020/Ranger21  
 
 
 ## Citation
