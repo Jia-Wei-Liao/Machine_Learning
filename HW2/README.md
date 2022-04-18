@@ -42,6 +42,7 @@ python test.py
 ```
 
 ## Experiment results
+Before training, we use random Horizontal flip, random rotation, auto-augmentation, random noise, normalize as preprocessing. 
 <table>
   <tr>
     <td>Model</td>
@@ -50,7 +51,6 @@ python test.py
     <td>Loss</td>
     <td>Optimizer</td>
     <td>Scheduler</td>
-    <td>Augmentation</td>
     <td>test acc</td>
   </tr>
   <tr>
@@ -60,7 +60,6 @@ python test.py
     <td>CE</td>
     <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
     <td>Step (size=3, gamma=0.8)</td>
-    <td>RandomHorizontalFlip,<br>RandomRotation,<br>Autoaugmentation,<br>RandomNoise,<br>Normalize</td>
     <td>88.57% </td>
   </tr>
   <tr>
@@ -70,7 +69,6 @@ python test.py
     <td>CE</td>
     <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
     <td>Step (size=3, gamma=0.8)</td>
-    <td>RandomHorizontalFlip,<br>RandomRotation,<br>Autoaugmentation,<br>RandomNoise,<br>Normalize</td>
     <td>89.34% </td>
   </tr>
   <tr>
@@ -80,7 +78,6 @@ python test.py
     <td>MC</td>
     <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
     <td>Step (size=3, gamma=0.8)</td>
-    <td>RandomHorizontalFlip,<br>RandomRotation,<br>Autoaugmentation,<br>RandomNoise,<br>Normalize</td>
     <td>88.37% </td>
   </tr>
   <tr>
@@ -90,7 +87,6 @@ python test.py
     <td>MC</td>
     <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
     <td>Step (size=3, gamma=0.8)</td>
-    <td>RandomHorizontalFlip,<br>RandomRotation,<br>Autoaugmentation,<br>RandomNoise,<br>Normalize</td>
     <td>88.73% </td>
   </tr>
   <tr>
@@ -100,7 +96,6 @@ python test.py
     <td>FL</td>
     <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
     <td>Step (size=3, gamma=0.8)</td>
-    <td>RandomHorizontalFlip,<br>RandomRotation,<br>Autoaugmentation,<br>RandomNoise,<br>Normalize</td>
     <td>88.24% </td>
   </tr>
   <tr>
@@ -110,7 +105,6 @@ python test.py
     <td>FL</td>
     <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
     <td>Step (size=3, gamma=0.8)</td>
-    <td>RandomHorizontalFlip,<br>RandomRotation,<br>Autoaugmentation,<br>RandomNoise,<br>Normalize</td>
     <td>89.35% </td>
   </tr>
   <tr>
@@ -120,7 +114,6 @@ python test.py
     <td>FLSD53</td>
     <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
     <td>Step (size=3, gamma=0.8)</td>
-    <td>RandomHorizontalFlip,<br>RandomRotation,<br>Autoaugmentation,<br>RandomNoise,<br>Normalize</td>
     <td>88.90% </td>
   </tr>
   <tr>
@@ -130,7 +123,6 @@ python test.py
     <td>FLSD53</td>
     <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
     <td>Step (size=3, gamma=0.8)</td>
-    <td>RandomHorizontalFlip,<br>RandomRotation,<br>Autoaugmentation,<br>RandomNoise,<br>Normalize</td>
     <td>89.52% </td>
   </tr>
   <tr>
@@ -140,7 +132,6 @@ python test.py
     <td>FL</td>
     <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
     <td>Step (size=3, gamma=0.8)</td>
-    <td>RandomHorizontalFlip,<br>RandomRotation,<br>Autoaugmentation,<br>RandomNoise,<br>Normalize</td>
     <td>93.56% </td>
   </tr>
   <tr>
@@ -150,7 +141,6 @@ python test.py
     <td>FLSD53</td>
     <td>AdamW (lr=1e-3,  weight decay=1e-4)</td>
     <td>Step (size=3, gamma=0.8)</td>
-    <td>RandomHorizontalFlip,<br>RandomRotation,<br>Autoaugmentation,<br>RandomNoise,<br>Normalize</td>
     <td>93.60% </td>
   </tr>
 </table>
