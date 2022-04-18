@@ -158,7 +158,7 @@ python test.py
 
 ## GitHub Acknowledgement
 We thank the authors of these repositories:
-- AutoAugment: https://github.com/DeepVoltaire/AutoAugment  
+- AutoAugmentation: https://github.com/DeepVoltaire/AutoAugment  
 - Swin Transformer: https://github.com/microsoft/Swin-Transformer  
 - MC-Loss: https://github.com/Kurumi233/Mutual-Channel-Loss  
 - FLSD53: https://github.com/torrvision/focal_calibration  
