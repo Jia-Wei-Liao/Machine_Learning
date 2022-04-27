@@ -143,6 +143,15 @@ Before training, we use random Horizontal flip, random rotation, auto-augmentati
     <td>Step (size=3, gamma=0.8)</td>
     <td>93.60% </td>
   </tr>
+  <tr>
+    <td>Teacher-Student</td>
+    <td>64</td>
+    <td>200</td>
+    <td>FL</td>
+    <td>AdamW (lr=3e-5,  weight decay=1e-4)</td>
+    <td>Step (size=3, gamma=0.8)</td>
+    <td>90.10% </td>
+  </tr>
 </table>
 
 
