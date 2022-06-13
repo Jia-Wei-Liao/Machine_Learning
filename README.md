@@ -8,3 +8,4 @@ We implement backward propagation by Python and MATLAB.
 We implement EfficientNet, Swin Transformer, Focal Loss, Mutual Channel Loss in the homework.
 
 ## Midterm: Paper Presentation
+Swin Transformer: Hierarchical Vision Transformer using Shifted Windows
