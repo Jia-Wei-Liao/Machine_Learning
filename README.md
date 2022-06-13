@@ -6,3 +6,5 @@ We implement backward propagation by Python and MATLAB.
 
 ## Homework 2: CIFA100 Classification
 We implement EfficientNet, Swin Transformer, Focal Loss, Mutual Channel Loss in the homework.
+
+## Midterm: Paper Presentation
