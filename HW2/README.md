@@ -1,5 +1,33 @@
 # CIFAR100_Classification
 
+## File structure
+.
+├─src
+|   ├─losses
+|   |   ├─FL.py
+|   |   ├─MCCE.py
+|   |   └─TSCE.py
+|   ├─models
+|   |   ├─pretrain_weight
+|   |   |    └─pretrain_weight
+|   |   |        └─swin_base_patch4_window12_384_22k.pth
+|   |   └─swin.py
+|   ├─optimizer
+|   |   ├─chebyshev_lr_functions.py
+|   |   ├─ranger21.py
+|   |   └─rangerabel.py
+|   ├─dataset.py
+|   ├─logger.py
+|   ├─trainer.py
+|   ├─transforms.py
+|   └─utils.py
+├─config.py
+├─model.py
+├─test.py
+└─train.py
+```
+
+
 ## Requirements
 - `numpy == 1.21.5`
 - `torch == 1.10.2`
