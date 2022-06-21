@@ -88,6 +88,9 @@ if __name__ == '__main__':
                         help='number of classes')
     parser.add_argument('--model', type=str, default='EfficientB4',
                         help='model')
+    parser.add_argument('--teacher_ckpt', type=str,
+                        default="checkpoint/04-18-02-12-47/weight/ep=0043-acc=0.9360.pth",
+                        help='checkpoint of teacher model')
     parser.add_argument('--pretrain', type=bool, default=0,
                         help='pretrained weight')
     parser.add_argument('--img_size', type=int, default=384,

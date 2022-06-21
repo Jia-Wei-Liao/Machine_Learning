@@ -29,7 +29,7 @@ python train.py -bs <batch size> \
                 --device <gpu id> \
                 --seed <random seed>
 ```
-- model: EfficientB4, Swin, TSM
+- model: EfficientB4, Swin
 - loss: CE, MCCE, FL, FLSD
 - optim: SGD, Adam, AdamW, Ranger
 - scheduler: step (gamma, step_size), cos
@@ -144,7 +144,7 @@ Before training, we use random Horizontal flip, random rotation, auto-augmentati
     <td>93.60% </td>
   </tr>
   <tr>
-    <td>Teacher-Student <br> (Swin-EfficientNet)</td>
+    <td>Teacher-Student</td>
     <td>64</td>
     <td>200</td>
     <td>FL</td>

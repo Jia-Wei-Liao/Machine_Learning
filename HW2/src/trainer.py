@@ -1,5 +1,6 @@
 import torch
 from tqdm import tqdm
+from .losses.TSCE import TSCE
 
 
 def compute_acc(pred, label):
@@ -9,7 +10,7 @@ def compute_acc(pred, label):
     return acc
 
 
-def train_step(ep, model, train_loader, criterion, use_mc_loss, optimizer, device):
+def train_step(ep, model, train_loader, criterion, use_mc_loss, optimizer, device, ts=False):
     model.train()
     total_num, correct, total_loss = 0, 0, 0
     train_bar = tqdm(train_loader, desc=f'Training {ep}')
@@ -24,6 +25,10 @@ def train_step(ep, model, train_loader, criterion, use_mc_loss, optimizer, devic
         if use_mc_loss:
             pred, feature = model(image, use_mc_loss=True)
             loss = criterion(pred, feature, label)
+
+        elif ts:
+            soft_label, pred = model(image)
+            loss = TSCE(pred, soft_label)
 
         else:
             pred = model(image)
@@ -55,7 +60,7 @@ def train_step(ep, model, train_loader, criterion, use_mc_loss, optimizer, devic
     return train_record
 
 
-def val_step(ep, model, val_loader, criterion, use_mc_loss, device):
+def val_step(ep, model, val_loader, criterion, use_mc_loss, device, ts=False):
     model.eval()
     total_num, correct, total_loss = 0, 0, 0
     val_bar = tqdm(val_loader, desc=f'Validation {ep}')
@@ -69,6 +74,10 @@ def val_step(ep, model, val_loader, criterion, use_mc_loss, device):
             if use_mc_loss:
                 pred, feature = model(image, use_mc_loss=True)
                 loss = criterion(pred, feature, label)
+
+            elif ts:
+                soft_label, pred = model(image)
+                loss = TSCE(pred, soft_label)
 
             else:
                 pred = model(image)

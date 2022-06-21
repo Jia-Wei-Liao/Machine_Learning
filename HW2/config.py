@@ -3,19 +3,19 @@ import torch.nn as nn
 
 from src.losses import FL, MCCE, TSCE
 from src.optimizer import ranger21
-from src.models.build import build_model
-from src.models.swin_utils import load_pretrained
-from model import EfficientNet_b4
-from ts_model import TeacherStudentModel
+from src.models.swin import SwinTransformer, load_pretrained
+from model import EfficientNet_b4, TeacherStudentModel
 
 
 def get_model(args):
     Model = {
         'EfficientB4': EfficientNet_b4,
-        'Swin': build_model,
+        'Swin': SwinTransformer,
         'TSM': TeacherStudentModel
     }
-    model = Model[args.model](args.num_classes)
+    model = Model[args.model](
+        num_classes=args.num_classes,
+        teacher_ckpt_path=args.teacher_ckpt)
 
     return model
 

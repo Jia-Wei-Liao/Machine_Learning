@@ -5,7 +5,7 @@ from torchvision.models import efficientnet_b4
 
 
 class EfficientNet_b4(nn.Module):
-    def __init__(self, num_classes=219):
+    def __init__(self, num_classes=219, *args, **kwargs):
         super(EfficientNet_b4, self).__init__()
         model = efficientnet_b4(pretrained=True)
         model.classifier[1] = torch.nn.Linear(
@@ -34,6 +34,27 @@ class EfficientNet_b4(nn.Module):
         else:
             return outputs
 
+
+class TeacherStudentModel(nn.Module):
+    def __init__(self, num_classes=100, teacher_ckpt_path=None, *args, **kwargs):
+        super(TeacherStudentModel, self).__init__()
+        self.student_model = EfficientNet_b4(num_classes)
+        self.teacher_model = torch.load(teacher_ckpt_path)
+
+    def save(self, path):
+        torch.save(self.student_model, path)
+
+        return
+
+    def forward(self, inputs, *args, **kwargs):
+        with torch.no_grad():
+            teacher_out = self.teacher_model(inputs)
+
+        student_out = self.student_model(inputs)
+
+        return teacher_out, student_out
+
+
 if __name__ == '__main__':
     model = EfficientNet_b4(100)
-    #print(model)
+
