@@ -144,7 +144,7 @@ Before training, we use random Horizontal flip, random rotation, auto-augmentati
     <td>93.60% </td>
   </tr>
   <tr>
-    <td>Teacher-Student (Swin-EfficientNet)</td>
+    <td>Teacher-Student <br> (Swin-EfficientNet)</td>
     <td>64</td>
     <td>200</td>
     <td>FL</td>
