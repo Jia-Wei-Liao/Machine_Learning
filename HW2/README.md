@@ -28,10 +28,10 @@
 └─train.py
 ```
 
-## Download Swin Transformer pre-trained weight
+## Download swin transformer pre-trained weight
 - You can download the pre-trained weight on the Google Drive:
 https://drive.google.com/file/d/1iMU08acRJNOIpX0La0kLAwFbEwq3dosO/view?usp=sharing
-- You can download the pre-trained weight on the Swin Transformer GitHub:
+- You can download the pre-trained weight on the Swin Transformer GitHub:  
 https://github.com/microsoft/Swin-Transformer
 
 ## Requirements
