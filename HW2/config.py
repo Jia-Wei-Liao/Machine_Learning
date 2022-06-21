@@ -1,22 +1,30 @@
 import torch
 import torch.nn as nn
 
-from src.losses import FL, MCCE
+from src.losses import FL, MCCE, TSCE
 from src.optimizer import ranger21
 from src.models.build import build_model
 from src.models.swin_utils import load_pretrained
 from model import EfficientNet_b4
+from ts_model import TeacherStudentModel
 
 
 def get_model(args):
     Model = {
         'EfficientB4': EfficientNet_b4,
-        'Swin': build_model
+        'Swin': build_model,
+        'TSM': TeacherStudentModel
     }
     model = Model[args.model](args.num_classes)
 
-    if args.model == 'Swin':
-        load_pretrained(model)
+    return model
+
+
+def get_pretrain(model, args):
+    if args.pretrain:
+        Weight = {
+            'Swin': load_pretrained(model)
+        }
 
     return model
 
@@ -26,7 +34,8 @@ def get_criterion(args, device):
         'CE':   nn.CrossEntropyLoss,
         'MCCE': MCCE.MCCE_Loss,
         'FL':   FL.FocalLoss,
-        'FLSD': FL.FocalLossAdaptive
+        'FLSD': FL.FocalLossAdaptive,
+        'TSCE': TSCE.TSCE_Loss
     }
     criterion = Losses[args.loss]()
 
