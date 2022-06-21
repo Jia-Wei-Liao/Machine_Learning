@@ -1,6 +1,7 @@
 # CIFAR100_Classification
 
 ## File structure
+```
 .
 ├─src
 |   ├─losses
